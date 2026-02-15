@@ -1,0 +1,25 @@
+[package]
+name = "kruti-typing"
+version = "0.1.0"
+edition = "2021"
+authors = ["Danish Khan"]
+description = "Hindi typing practice application using Kruti Dev font"
+license = "MIT"
+repository = ""
+
+[dependencies]
+iced = { version = "0.13", features = ["advanced"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+native-dialog = "0.6"
+rand = "0.8"
+chrono = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+
+[build-dependencies]
+
+[features]
+default = []
+
+[profile.release]
+lto = true
+opt-level = 3
