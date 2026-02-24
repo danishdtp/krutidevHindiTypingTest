@@ -1,3 +1,5 @@
+pub static EMBEDDED_WORDS: &str = include_str!("../hindi-words.txt");
+
 use iced::widget::{button, container, text_input, Column, Row, Text};
 use iced::{Element, Font, Length, Subscription};
 use rand::rngs::StdRng;
@@ -28,9 +30,10 @@ pub struct App {
 
 impl Default for App {
     fn default() -> Self {
-        let words = std::fs::read_to_string("hindi-words.txt")
-            .map(|content| content.split_whitespace().map(|s| s.to_string()).collect())
-            .unwrap_or_else(|_| vec!["vkt".to_string(), "dke".to_string(), "cgqr".to_string()]);
+        let words: Vec<String> = EMBEDDED_WORDS
+            .split_whitespace()
+            .map(|s| s.to_string())
+            .collect();
 
         let db = Database::new("typing_stats.db").unwrap();
         let best_wpm = db.get_best_wpm().unwrap_or(0);
