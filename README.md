@@ -11,6 +11,7 @@ A desktop application for practicing Hindi typing using the Kruti Dev font.
 - **Best Score** - Track your personal best WPM
 - **Custom Word Lists** - Load your own Hindi word files (.txt)
 - **Hindi Font** - Built-in support for Kruti Dev 010 font
+<img width="618" height="607" alt="image" src="https://github.com/user-attachments/assets/abbe4312-9cd8-4e90-9d7f-5dd716152ca4" />
 
 ## Requirements
 
